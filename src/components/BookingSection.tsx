@@ -21,7 +21,7 @@ export default function BookingSection() {
         id: "meet",
         label: "Meet & Greet",
         subtitle: "Free · 30 min",
-        url: "https://calendly.com/kopp-alexander/standard-visit-20-30-minutes-clone-1",
+        url: "https://calendly.com/kopp-alexander/meet-greet-visit-30-minutes",
         note: "Recommended for all new clients.",
         summary:
           "A short introductory visit to meet you and your pet, confirm routines, discuss access, and go over any special instructions before the first booked service.",
@@ -37,7 +37,7 @@ export default function BookingSection() {
         id: "standard",
         label: "Standard Visit",
         subtitle: "20–30 min · $45",
-        url: "https://calendly.com/kopp-alexander/30min",
+        url: "https://calendly.com/kopp-alexander/standard-visit-30min",
         note: "Feeding, litter cleaning, water refresh, interaction, photo update.",
         summary:
           "A reliable everyday visit for pets who need essential care, a quick wellbeing check, and a calm check-in while you’re away.",
@@ -54,7 +54,7 @@ export default function BookingSection() {
         id: "extended",
         label: "Extended Visit",
         subtitle: "45 min · $65",
-        url: "https://calendly.com/kopp-alexander/standard-visit-20-30-minutes-clone",
+        url: "https://calendly.com/kopp-alexander/extended-visit-45-minutes",
         note: "Extra enrichment, brushing, companionship.",
         summary:
           "A longer visit for pets who benefit from more attention, extra companionship, or a slower-paced routine with additional enrichment.",
@@ -71,7 +71,7 @@ export default function BookingSection() {
         id: "medication",
         label: "Medication Visit",
         subtitle: "$70",
-        url: "https://calendly.com/kopp-alexander/standard-visit-20-30-minutes-clone-2",
+        url: "https://calendly.com/kopp-alexander/medication-visit-20-30-minutes",
         note: "Oral medication or insulin after owner handover.",
         summary:
           "A dedicated visit for pets that require medication as part of their care routine, provided instructions have been clearly handed over in advance.",
@@ -87,7 +87,7 @@ export default function BookingSection() {
         id: "transport",
         label: "Vet / Groomer Transport",
         subtitle: "$80",
-        url: "https://calendly.com/kopp-alexander/medication-visit-clone",
+        url: "https://calendly.com/kopp-alexander/vet-groomer-visit",
         note: "Pickup and drop-off within suburb.",
         summary:
           "A practical transport service for vet or groomer appointments when you need help with local pickup and drop-off.",
