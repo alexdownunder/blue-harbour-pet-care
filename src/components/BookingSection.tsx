@@ -68,22 +68,6 @@ export default function BookingSection() {
           "Great for pets who need more time, stimulation, or comfort.",
       },
       {
-        id: "medication",
-        label: "Medication Visit",
-        subtitle: "$70",
-        url: "https://calendly.com/kopp-alexander/medication-visit-20-30-minutes",
-        note: "Oral medication or insulin after owner handover.",
-        summary:
-          "A dedicated visit for pets that require medication as part of their care routine, provided instructions have been clearly handed over in advance.",
-        includes: [
-          "Medication administered according to owner instructions",
-          "Wellbeing check during the visit",
-          "Photo or status update after the visit",
-        ],
-        extraNote:
-          "Medication visits are offered only after owner handover at meet & greet, with clear written instructions, and where safe for the pet.",
-      },
-      {
         id: "transport",
         label: "Vet / Groomer Transport",
         subtitle: "$80",
@@ -121,7 +105,7 @@ export default function BookingSection() {
           </p>
         </div>
 
-        <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
           {options.map((option) => {
             const active = option.id === selectedId;
 
@@ -215,7 +199,10 @@ export default function BookingSection() {
             No same-day bookings. Please book by 8pm the evening prior where possible.
           </p>
           <p className="text-xs text-slate-500">
-            Weekend surcharge +15% · Public holiday surcharge +20%
+            Weekend surcharge +10% · Public holiday surcharge +20%
+          </p>
+          <p className="max-w-2xl text-xs text-slate-500">
+            Medication support can be included during visits if discussed in advance and safe to carry out.
           </p>
         </div>
       </div>

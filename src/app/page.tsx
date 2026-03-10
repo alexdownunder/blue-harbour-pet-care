@@ -21,6 +21,9 @@ export default function Home() {
           </a>
 
           <nav className="hidden items-center gap-7 md:flex">
+            <a className="text-sm font-medium text-slate-600 hover:text-slate-900" href="#about">
+              About
+            </a>
             <a className="text-sm font-medium text-slate-600 hover:text-slate-900" href="#services">
               Services
             </a>
@@ -85,8 +88,8 @@ export default function Home() {
           </p>
 
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-relaxed text-slate-600 md:text-base">
-            Friendly in-home visits that keep your pets comfy in their own space while you&apos;re away. No fuss, no big
-            upheaval — just thoughtful care, regular updates, and peace of mind.
+            Friendly in-home visits that keep your pets comfortable in their own space while you&apos;re away. No fuss,
+            no big upheaval — just thoughtful care, regular updates, and peace of mind.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -107,28 +110,94 @@ export default function Home() {
           <p className="mt-5 text-xs text-slate-500">
             Every new client gets a free meet &amp; greet so you can make sure it feels like the right fit.
           </p>
-          <p className="mt-2 text-xs text-slate-500">
-            Want a regular weekly slot? Book your preferred time and add a note that you&apos;re after a recurring visit.
-          </p>
+        </section>
+
+        {/* Conversion / trust strip */}
+        <section className="pb-12">
+          <div className="rounded-3xl border border-slate-900/10 bg-white/70 px-5 py-4 text-center shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
+              <span>Owner-operated</span>
+              <span className="hidden text-slate-300 sm:inline">•</span>
+              <span>Public Liability Insured</span>
+              <span className="hidden text-slate-300 sm:inline">•</span>
+              <span>Police Checked</span>
+              <span className="hidden text-slate-300 sm:inline">•</span>
+              <span>Photo update after every visit</span>
+            </div>
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="pb-12 md:pb-16">
+          <Card className="mx-auto max-w-4xl">
+            <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+              <div>
+                <p className="text-[11px] font-semibold tracking-[0.24em] text-slate-500">ABOUT</p>
+                <h3 className="mt-3 font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
+                  Meet the person caring for your pets
+                </h3>
+
+                <div className="mt-5 space-y-4 text-sm leading-relaxed text-slate-600 md:text-base">
+                  <p>Hi, I&apos;m Alex.</p>
+
+                  <p>
+                    Blue Harbour Pet Care started as a small local service in Sydney&apos;s Eastern Suburbs with a simple
+                    goal: providing calm, reliable home visits so pets can stay comfortable in their own environment
+                    while their owners are away.
+                  </p>
+
+                  <p>
+                    Before starting Blue Harbour Pet Care I worked as an engineer, but over time I realised I wanted
+                    to spend my time doing something more hands-on and meaningful — something that genuinely helps
+                    people and their animals.
+                  </p>
+
+                  <p>
+                    At home we have an Italian Greyhound and two Siamese cats, and over the years we&apos;ve relied on many
+                    pet sitters ourselves while travelling. From that experience I know how important trust and a good
+                    gut feeling are when inviting someone into your home and caring for your pets.
+                  </p>
+
+                  <p>
+                    I understand that trusting someone with your home and your animals is a big step, so every visit
+                    is handled with care, clear communication, and respect for both your home and your pets.
+                  </p>
+
+                  <p>
+                    Most clients start with a free meet &amp; greet so everyone — pets and humans — feels comfortable
+                    before the first visit.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid gap-3">
+                <TrustPill text="Local Eastern Suburbs owner-operator" />
+                <TrustPill text="Public Liability Insured" />
+                <TrustPill text="Police Checked" />
+                <TrustPill text="Free meet & greet available" />
+              </div>
+            </div>
+          </Card>
         </section>
 
         {/* Services */}
         <section id="services" className="pb-12 md:pb-16">
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
-              <h3 className="text-sm font-semibold tracking-wide text-slate-900">What we can help with</h3>
+              <h3 className="text-sm font-semibold tracking-wide text-slate-900">What I can help with</h3>
               <div className="mt-4 h-px w-16 bg-slate-900/15" />
 
               <ul className="mt-6 space-y-3 text-sm text-slate-700 md:text-base">
                 <Li>Cat and small pet visits</Li>
-                <Li>Senior pet care and check-ins</Li>
+                <Li>Senior pet care and gentle check-ins</Li>
                 <Li>Feeding, water refresh and home routines</Li>
+                <Li>Medication support during visits if discussed in advance</Li>
                 <Li>Vet and groomer transport</Li>
                 <Li>Photo updates after every visit</Li>
               </ul>
 
               <p className="mt-6 text-xs text-slate-500">
-                Cats and dogs welcome. If your pet has their own little routine, we&apos;re happy to stick to it.
+                Calm, low-fuss care designed to keep routines familiar and pets comfortable at home.
               </p>
             </Card>
 
@@ -148,6 +217,12 @@ export default function Home() {
                   <a href="tel:0485671662" className="font-semibold text-slate-900">
                     0485 671 662
                   </a>
+                </div>
+                <div>
+                  <div className="text-[11px] uppercase tracking-widest text-slate-500">Good to know</div>
+                  <div className="text-sm text-slate-700">
+                    If you later want a regular weekly slot, this can usually be arranged after the first booking.
+                  </div>
                 </div>
               </div>
 
@@ -171,8 +246,8 @@ export default function Home() {
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-4">
-            <MiniCard title="Book online" body="Book by 8pm the evening before and choose what suits best." />
-            <MiniCard title="We plan the visit" body="We confirm the timing based on the day&apos;s route and availability." />
+            <MiniCard title="Book online" body="Choose the service that suits best and select a time that works for you." />
+            <MiniCard title="We plan the visit" body="Visit timing is confirmed around the day&apos;s route and availability." />
             <MiniCard title="Photo updates" body="You&apos;ll get a little update after each visit, because of course you&apos;ll miss them." />
             <MiniCard title="Weekly invoice" body="Visits are invoiced once a week after care has been provided." />
           </div>
@@ -185,7 +260,7 @@ export default function Home() {
 
             <div className="mt-5 grid gap-3 md:grid-cols-2">
               <Pill text="No same-day bookings" />
-              <Pill text="Book by 8pm the evening before" />
+              <Pill text="Please book by 8pm the evening before" />
               <Pill text="Recurring clients get priority slots" />
               <Pill text="Visit times are confirmed after booking" />
             </div>
@@ -221,9 +296,9 @@ export default function Home() {
                   desc="More time for enrichment, brushing, company, and a slower paced visit"
                 />
                 <PriceRow
-                  title="Medication Visit"
-                  price="$70"
-                  desc="Oral medication, and insulin only after owner handover at meet & greet with written instructions and safe suitability"
+                  title="Meet & Greet"
+                  price="Free"
+                  desc="A relaxed first visit to get comfortable with routines, access, and care needs"
                 />
                 <PriceRow
                   title="Vet/Groomer Transport (within suburb)"
@@ -232,8 +307,13 @@ export default function Home() {
                 />
               </div>
 
+              <p className="mt-5 text-sm leading-relaxed text-slate-600">
+                Medication support can be included during visits where discussed in advance, clear owner
+                instructions have been provided, and the task is safe and appropriate to carry out.
+              </p>
+
               <div className="mt-6 grid gap-3 md:grid-cols-2">
-                <SurchargeRow label="Weekend surcharge" value="+15%" />
+                <SurchargeRow label="Weekend surcharge" value="+10%" />
                 <SurchargeRow label="Public holiday surcharge" value="+20%" />
               </div>
 
@@ -250,19 +330,16 @@ export default function Home() {
             <Card>
               <h4 className="text-sm font-semibold tracking-wide text-slate-900">A few handy notes</h4>
               <p className="mt-2 text-sm text-slate-600">
-                We keep things clear and low-fuss so you know exactly what to expect.
+                Everything is designed to stay clear, calm, and easy to follow.
               </p>
 
               <div className="mt-5 space-y-3 text-sm text-slate-700">
-                <NoteItem title="Invoicing">
-                  Invoices are sent once per week after visits.
+                <NoteItem title="Invoicing">Invoices are sent once per week after visits.</NoteItem>
+                <NoteItem title="Medication support">
+                  Available during visits where agreed in advance and safe to carry out.
                 </NoteItem>
-                <NoteItem title="Medication visits">
-                  These are offered only after a meet &amp; greet handover with written instructions, and where it&apos;s safe
-                  and suitable for the pet.
-                </NoteItem>
-                <NoteItem title="Weekends &amp; holidays">
-                  Weekend visits attract a +15% surcharge. Public holidays are +20%.
+                <NoteItem title="Regular bookings">
+                  Ongoing weekly visits can usually be arranged after your first booking or meet &amp; greet.
                 </NoteItem>
               </div>
 
@@ -276,6 +353,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Reassurance / conversion section */}
+        <section className="pb-12 md:pb-16">
+          <Card className="mx-auto max-w-4xl">
+            <div className="text-center">
+              <h3 className="font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
+                Thoughtful care, without the fuss
+              </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 md:text-base">
+                For many pets, staying at home is the calmest option. The focus here is on familiar routines,
+                gentle handling, clear communication, and making things feel easy for both you and your pets.
+              </p>
+            </div>
+          </Card>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="pb-12 md:pb-16">
           <h3 className="text-center font-serif text-2xl font-semibold text-slate-900 md:text-3xl">FAQ</h3>
@@ -287,15 +379,15 @@ export default function Home() {
             />
             <Faq
               q="Do you offer recurring weekly visits?"
-              a="Yes. Regular weekly clients get priority access to preferred time slots."
-            />
-            <Faq
-              q="How do bookings work?"
-              a="There are no same-day bookings, so please book by 8pm the evening before."
+              a="Yes. Regular weekly visits can usually be arranged after your first booking or meet & greet, and recurring clients get priority access to preferred time slots."
             />
             <Faq
               q="How does payment work?"
               a="Invoices are sent weekly after visits have taken place."
+            />
+            <Faq
+              q="Do you offer medication support?"
+              a="Yes — medication support can be included during visits where it has been discussed in advance and is safe and appropriate to carry out."
             />
             <Faq
               q="Are you insured and police checked?"
@@ -312,7 +404,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="pb-10 text-center text-xs text-slate-500">
           <div className="mx-auto max-w-3xl border-t border-slate-900/10 pt-8">
-            <p>Public Liability Insured · Police Checked</p>
+            <p>Public Liability Insured · Police Checked · Owner-operated</p>
             <p className="mt-2">
               <span className="font-semibold text-slate-800">BLUE HARBOUR Pet Care</span> — Peace of Mind for Your Pets
             </p>
@@ -371,6 +463,17 @@ function Pill({ text }: { text: string }) {
     <div className="flex items-start gap-3 rounded-2xl border border-slate-900/10 bg-white/60 px-4 py-3">
       <span className="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900/60" />
       <span className="text-sm text-slate-700">{text}</span>
+    </div>
+  );
+}
+
+function TrustPill({ text }: { text: string }) {
+  return (
+    <div className="flex items-center gap-3 rounded-2xl border border-slate-900/10 bg-white/60 px-4 py-3 text-sm text-slate-700">
+      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] font-semibold text-white">
+        ✓
+      </span>
+      <span>{text}</span>
     </div>
   );
 }
