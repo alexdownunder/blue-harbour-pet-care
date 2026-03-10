@@ -299,7 +299,7 @@ export default function Home() {
             />
             <Faq
               q="Are you insured and police checked?"
-              a="Yes — fully insured and police checked."
+              a="Yes — public liability insured and police checked."
             />
           </div>
         </section>
@@ -312,7 +312,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="pb-10 text-center text-xs text-slate-500">
           <div className="mx-auto max-w-3xl border-t border-slate-900/10 pt-8">
-            <p>Fully Insured · Police Checked</p>
+            <p>Public Liability Insured · Police Checked</p>
             <p className="mt-2">
               <span className="font-semibold text-slate-800">BLUE HARBOUR Pet Care</span> — Peace of Mind for Your Pets
             </p>

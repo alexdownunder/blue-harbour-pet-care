@@ -29,7 +29,7 @@ export default function TermsPage() {
             on route, traffic, and existing bookings.
           </Section>
 
-          <Section title="3. Meet & Greet">
+          <Section title="3. Meet &amp; Greet">
             A meet &amp; greet may be required before services begin, especially for new clients, medication visits,
             or pets with specific routines or health needs. Blue Harbour Pet Care reserves the right to decline
             services if a safe or suitable care arrangement cannot be established.
@@ -82,7 +82,14 @@ export default function TermsPage() {
             issued weekly after visits have taken place and are payable within the timeframe shown on the invoice.
           </Section>
 
-          <Section title="11. Liability">
+          <Section title="11. Service Policy">
+            Blue Harbour Pet Care services are also provided in accordance with the Blue Harbour Pet Care Service
+            Policy. By booking a service, clients agree to the Service Policy together with these Terms &amp;
+            Conditions. The Service Policy forms part of these terms and includes additional details about visit
+            procedures, property access, pet care arrangements, emergencies, and service limitations.
+          </Section>
+
+          <Section title="12. Liability">
             Blue Harbour Pet Care will provide services with reasonable care and attention. However, Blue Harbour
             Pet Care is not liable for loss, injury, illness, death, escape, or damage arising from undisclosed
             behavioural issues, pre-existing health conditions, third-party actions, acts of other animals, or
@@ -90,23 +97,23 @@ export default function TermsPage() {
             under Australian Consumer Law.
           </Section>
 
-          <Section title="12. Property and Household Conditions">
+          <Section title="13. Property and Household Conditions">
             Blue Harbour Pet Care is not responsible for household issues outside the scope of the booked service,
             including existing property damage, pet-related mess, infestations, or mechanical failures such as
             faulty locks, alarms, plumbing, or appliances.
           </Section>
 
-          <Section title="13. Key and Access Information">
+          <Section title="14. Key and Access Information">
             Keys and access details will be handled with reasonable care and stored securely. Blue Harbour Pet Care
             will not label keys with identifying client information.
           </Section>
 
-          <Section title="14. Changes to These Terms">
+          <Section title="15. Changes to These Terms">
             These Terms &amp; Conditions may be updated from time to time. The latest version published on the website
             will apply to new bookings from the date of publication.
           </Section>
 
-          <Section title="15. Contact">
+          <Section title="16. Contact">
             For questions about these terms, please contact Blue Harbour Pet Care at 0485 671 662.
           </Section>
         </div>
