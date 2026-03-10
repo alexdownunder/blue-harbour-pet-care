@@ -43,7 +43,7 @@ export default function ServicePolicyPage() {
           />
           <Card
             title="Medication visits"
-            body="Medication support is only offered where it has been discussed in advance and is safe and appropriate to provide."
+            body="Medication support is only offered where it has been discussed in advance, clear owner instructions have been provided, and the task is safe and appropriate to carry out."
           />
           <Card
             title="Invoices"
@@ -71,7 +71,7 @@ export default function ServicePolicyPage() {
           />
           <Card
             title="Animals can be unpredictable"
-            body="While every visit is carried out with care and attention, animals may behave unpredictably. Blue Harbour Pet Care is not liable for illness, injury, escape, loss, or death of a pet except where caused by proven negligence."
+            body="While every visit is carried out with care and attention, animals may behave unpredictably. Blue Harbour Pet Care is not liable for illness, injury, escape, loss, or death of a pet except to the extent caused by a failure to exercise reasonable care."
           />
           <Card
             title="Home environment"
