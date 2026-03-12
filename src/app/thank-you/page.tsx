@@ -29,6 +29,25 @@ export default function ThankYouPage() {
                 If this is your first booking, please complete the client intake form before your
                 visit so routines, care details, and access information are clear in advance.
               </p>
+
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 md:text-base">
+                The form also includes confirmation of our{" "}
+                <Link href="/terms" className="font-medium text-slate-900 underline underline-offset-4">
+                  Terms &amp; Conditions
+                </Link>
+                ,{" "}
+                <Link
+                  href="/service-policy"
+                  className="font-medium text-slate-900 underline underline-offset-4"
+                >
+                  Service Policy
+                </Link>
+                , and{" "}
+                <Link href="/privacy" className="font-medium text-slate-900 underline underline-offset-4">
+                  Privacy Policy
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="mt-8 flex justify-center">
