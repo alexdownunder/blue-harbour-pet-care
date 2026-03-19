@@ -1,8 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BookingSection from "@/components/BookingSection";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <div className="min-h-screen bg-[#F8F2EF] text-slate-900">
       {/* Warm pastel background */}
@@ -12,56 +19,143 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-[#F8F2EF]/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-          <a href="#top" className="flex min-w-0 items-center">
-            <span className="whitespace-nowrap text-[13px] font-semibold tracking-tight text-[#16213A] sm:text-sm">
-              BLUE HARBOUR <span className="font-medium text-slate-600">Pet Care</span>
-            </span>
-          </a>
+      <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-[#F8F2EF]/90 backdrop-blur-xl">
+        <div className="mx-auto max-w-6xl px-4 py-3 md:px-6 md:py-4">
+          {/* Mobile header */}
+          <div className="grid grid-cols-[44px_1fr_auto] items-center gap-3 md:hidden">
+            <button
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#16213A]/10 bg-white/70 text-[#16213A] shadow-sm"
+            >
+              <span className="flex flex-col gap-1.5">
+                <span className="block h-[2px] w-4 rounded-full bg-[#16213A]" />
+                <span className="block h-[2px] w-4 rounded-full bg-[#16213A]" />
+                <span className="block h-[2px] w-4 rounded-full bg-[#16213A]" />
+              </span>
+            </button>
 
-          <nav className="hidden items-center gap-7 md:flex">
-            <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#about">
-              About
+            <a href="#top" className="min-w-0 text-center" onClick={closeMobileMenu}>
+              <span className="block text-[11px] font-semibold tracking-tight text-[#16213A] sm:text-[13px]">
+                BLUE HARBOUR <span className="font-medium text-slate-600">Pet Care</span>
+              </span>
             </a>
-            <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#services">
-              Services
-            </a>
-            <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#home-team">
-              Home Team
-            </a>
-            <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#pricing">
-              Pricing
-            </a>
-            <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#faq">
-              FAQ
-            </a>
+
             <a
-              className="rounded-full bg-[#16213A] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d2b4a]"
+              className="inline-flex items-center justify-center rounded-full bg-[#16213A] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d2b4a]"
               href="#booking"
+              onClick={closeMobileMenu}
             >
               Book Online
             </a>
-          </nav>
+          </div>
 
-          <a
-            className="shrink-0 rounded-full bg-[#16213A] px-4 py-2 text-sm font-semibold text-white shadow-sm md:hidden"
-            href="#booking"
-          >
-            Book Online
-          </a>
+          {/* Desktop header */}
+          <div className="hidden items-center justify-between md:flex">
+            <a href="#top" className="flex min-w-0 items-center">
+              <span className="whitespace-nowrap text-[13px] font-semibold tracking-tight text-[#16213A] sm:text-sm">
+                BLUE HARBOUR <span className="font-medium text-slate-600">Pet Care</span>
+              </span>
+            </a>
+
+            <nav className="flex items-center gap-7">
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#about">
+                About
+              </a>
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#services">
+                Services
+              </a>
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#home-team">
+                Home Team
+              </a>
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#pricing">
+                Pricing
+              </a>
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#testimonials">
+                Reviews
+              </a>
+              <a className="text-sm font-medium text-slate-600 hover:text-[#16213A]" href="#faq">
+                FAQ
+              </a>
+              <a
+                className="rounded-full bg-[#16213A] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d2b4a]"
+                href="#booking"
+              >
+                Book Online
+              </a>
+            </nav>
+          </div>
+
+          {/* Mobile menu */}
+          {mobileMenuOpen ? (
+            <div className="mt-3 rounded-3xl border border-[#16213A]/10 bg-white/90 p-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] md:hidden">
+              <nav className="grid gap-2">
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#about"
+                  onClick={closeMobileMenu}
+                >
+                  About
+                </a>
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#services"
+                  onClick={closeMobileMenu}
+                >
+                  Services
+                </a>
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#home-team"
+                  onClick={closeMobileMenu}
+                >
+                  Home Team
+                </a>
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#pricing"
+                  onClick={closeMobileMenu}
+                >
+                  Pricing
+                </a>
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#testimonials"
+                  onClick={closeMobileMenu}
+                >
+                  Reviews
+                </a>
+                <a
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-[#16213A] transition hover:bg-[#DDEEF5]/45"
+                  href="#faq"
+                  onClick={closeMobileMenu}
+                >
+                  FAQ
+                </a>
+                <a
+                  className="mt-1 inline-flex items-center justify-center rounded-2xl bg-[#16213A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d2b4a]"
+                  href="#booking"
+                  onClick={closeMobileMenu}
+                >
+                  Book Online
+                </a>
+              </nav>
+            </div>
+          ) : null}
         </div>
       </header>
 
       <main id="top" className="mx-auto max-w-6xl px-4 md:px-6">
         {/* Hero */}
-        <section className="relative pt-14 pb-12 text-center md:pt-20 md:pb-16">
+        <section className="relative pb-12 pt-14 text-center md:pb-16 md:pt-20">
           <p className="text-[11px] font-semibold tracking-[0.28em] text-[#5F6673]">
             SYDNEY EASTERN SUBURBS
           </p>
 
           <div className="pointer-events-none mx-auto mt-8 flex justify-center">
-            <div className="relative h-20 w-[520px] md:h-24 md:w-[620px]">
+            <div className="relative h-16 w-[280px] sm:h-20 sm:w-[420px] md:h-24 md:w-[620px]">
               <Image
                 src="/brand/bridge-arc-v2.png"
                 alt="Sydney Harbour Bridge"
@@ -72,23 +166,21 @@ export default function Home() {
             </div>
           </div>
 
-          <h1 className="mt-6 font-serif text-[clamp(2.2rem,8vw,4.6rem)] font-semibold leading-[0.95] tracking-tight text-[#16213A]">
-            <span className="whitespace-nowrap">
+          <div className="mx-auto mt-6 max-w-[19rem] sm:max-w-none">
+            <h1 className="font-serif text-[clamp(2rem,8.2vw,4.6rem)] font-semibold leading-[0.98] tracking-tight text-[#16213A]">
               BLUE HARBOUR <span className="font-semibold">Pet Care</span>
-            </span>
-          </h1>
+            </h1>
+          </div>
 
-          <h2 className="mt-4 text-sm font-semibold tracking-[0.18em] text-[#4F5C70] md:text-base">
+          <h2 className="mx-auto mt-4 max-w-[20rem] text-sm font-semibold tracking-[0.18em] text-[#4F5C70] md:max-w-none md:text-base">
             Calm, reliable in-home visits
           </h2>
 
-          <p className="mt-7 whitespace-nowrap text-[12px] font-semibold text-[#16213A] sm:text-sm md:text-base">
+          <p className="mx-auto mt-7 max-w-[20rem] text-[12px] font-semibold leading-relaxed text-[#16213A] sm:max-w-none sm:text-sm md:text-base">
             Maroubra · Pagewood · Matraville · Hillsdale · Malabar · Coogee
           </p>
 
-          <p className="mt-2 text-sm italic text-[#667085] md:text-base">
-            Calm · Reliable · Local
-          </p>
+          <p className="mt-2 text-sm italic text-[#667085] md:text-base">Calm · Reliable · Local</p>
 
           <div className="mx-auto mt-9 grid max-w-5xl gap-8 md:grid-cols-[1.02fr_0.98fr] md:items-center md:text-left">
             <div className="order-2 md:order-1">
@@ -186,7 +278,6 @@ export default function Home() {
                   src="/brand/about-alex-placeholder.jpg"
                   alt="Alex with Sansa"
                   height="h-[340px] md:h-[400px]"
-                  priority={false}
                   objectClassName="object-[center_22%]"
                 />
 
@@ -241,7 +332,9 @@ export default function Home() {
                 />
               </div>
 
-              <h3 className="text-sm font-semibold tracking-wide text-[#16213A]">Start with a free meet &amp; greet</h3>
+              <h3 className="text-sm font-semibold tracking-wide text-[#16213A]">
+                Start with a free meet &amp; greet
+              </h3>
               <p className="mt-2 text-sm text-[#5F6673]">
                 A relaxed first hello so you, your pets, and your home routine all feel comfortable.
               </p>
@@ -476,6 +569,32 @@ export default function Home() {
           </Card>
         </section>
 
+        {/* Testimonials */}
+        <section id="testimonials" className="pb-12 md:pb-16">
+          <div className="text-center">
+            <p className="text-[11px] font-semibold tracking-[0.24em] text-[#667085]">REVIEWS</p>
+            <h3 className="mt-3 font-serif text-2xl font-semibold text-[#16213A] md:text-3xl">
+              Kind words from local pet owners
+            </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#5F6673] md:text-base">
+              Trust matters with pet care, so here are a few words from local owners.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <TestimonialCard
+              quote="Alex was calm, reliable and clearly cared about our pets. The updates after each visit gave us real peace of mind."
+              name="Mavis"
+              detail="Cat owner, Maroubra"
+            />
+            <TestimonialCard
+              quote="It felt easy to trust Alex in our home, and our pets were relaxed and well looked after. We would happily recommend Blue Harbour Pet Care."
+              name="Lisa"
+              detail="Pet owner, Pagewood"
+            />
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="pb-12 md:pb-16">
           <h3 className="text-center font-serif text-2xl font-semibold text-[#16213A] md:text-3xl">FAQ</h3>
@@ -569,13 +688,7 @@ function StandardImage({
         height,
       ].join(" ")}
     >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        priority={priority}
-        className={`object-cover ${objectClassName}`}
-      />
+      <Image src={src} alt={alt} fill priority={priority} className={`object-cover ${objectClassName}`} />
     </div>
   );
 }
@@ -740,6 +853,33 @@ function PetCard({
         </div>
 
         {note ? <p className="mt-4 text-sm italic text-[#667085]">{note}</p> : null}
+      </div>
+    </div>
+  );
+}
+
+function TestimonialCard({
+  quote,
+  name,
+  detail,
+}: {
+  quote: string;
+  name: string;
+  detail: string;
+}) {
+  return (
+    <div className="rounded-3xl border border-[#16213A]/10 bg-white/80 p-7 shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur">
+      <div className="inline-flex rounded-full bg-[#DDEEF5]/70 px-3 py-1 text-[11px] font-semibold tracking-wide text-[#4F5C70]">
+        Local client
+      </div>
+
+      <p className="mt-5 font-serif text-xl leading-relaxed text-[#16213A] md:text-2xl">&ldquo;{quote}&rdquo;</p>
+
+      <div className="mt-6 h-px w-16 bg-[#16213A]/10" />
+
+      <div className="mt-5">
+        <p className="text-sm font-semibold text-[#16213A]">{name}</p>
+        <p className="mt-1 text-sm text-[#667085]">{detail}</p>
       </div>
     </div>
   );
